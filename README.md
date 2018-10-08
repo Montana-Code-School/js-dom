@@ -12,7 +12,7 @@ All these objects are accessible using JavaScript.
 
 ### DOM Structure - Tree
 
-The DOM is organized as a tree data structure. A tree has a branching structure, has no cycles (a node may not contain itself, directly or indirectly), and has a single, well-defined root. In the case of the DOM, `document` serves as the root.
+The DOM is organized as a tree. A tree has a branching structure, has no cycles (a node may not contain itself, directly or indirectly), and has a single, well-defined root. In the case of the DOM, `document` serves as the root.
 
 A way to visualize our document tree is as follows:
 ![DOM Tree Example](https://eloquentjavascript.net/img/html-tree.svg)
@@ -26,20 +26,24 @@ DOM nodes contain a wealth of links to other nearby nodes. The following diagram
 ![DOM Tree Example](https://eloquentjavascript.net/img/html-links.svg)
 
 - childNodes - Returns all children nodes of a node in an array like list ([NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList))
-- firstChld - Returns first child of a node
+- firstChild & lastChild - Returns first or last child of a node
 - nextSibling & previousSibling - Returns adjacent nodes, which are nodes with the same parent that appear immediately before or after the node itself
 
 ### Finding Elements
+
+There are multiple methods available to find certain elements by tag name, class name or id:
+
+- document.getElementById("firstTitle") - Finds the element with the id "firstTitle" (i.e. `<h1 id="firstTitle">Hello World!</h1>`)
+- document.getElementByTagName("p") - Finds all paragraph elements with the tag `<p>some random paragraph text</p>`
+- document.getElementByClassName(".sub-title") - Finds all elements with class "sub-title") (i.e. `<h3 class="sub-title">Some Sub Heading</h3>`) and returns an array like HTMLCollection.
+- document.querySelector("h5.small-title") - Finds the first element which matches the CSS selector string (i.e `<h5 class="small-title">Small Heading</h5>`).
+- document.querySelectorAll("h5.small-title") - Finds the all elements which matches the CSS selector string (i.e `<h5 class="small-title">Small Heading</h5>`) and returns them as an array like NodeList.
 
 ### Updating Elements
 
 ### Creating Elements
 
 ### More Resources
-
-- [Medium - How to handle JS Events](https://medium.freecodecamp.org/event-handling-in-javascript-with-examples-f6bc1e2fff57)
-- [YoutTube Video - What Are Events in JS](https://www.youtube.com/watch?v=gx0oAgvXyE4)
-- [MDN - DOM Event Interface ](https://developer.mozilla.org/en-US/docs/Web/API/Event)
 
 ### Exercises
 
