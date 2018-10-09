@@ -14,13 +14,17 @@ All these objects are accessible using JavaScript.
 
 The DOM is organized as a tree. A tree has a branching structure, has no cycles (a node may not contain itself, directly or indirectly), and has a single, well-defined root. In the case of the DOM, `document` serves as the root.
 
-A way to visualize our document tree is as follows: ![DOM Tree Example](https://eloquentjavascript.net/img/html-tree.svg)
+## A way to visualize our document tree is as follows:
+
+## ![DOM Tree Example](https://eloquentjavascript.net/img/html-tree.svg)
 
 The leaves are text nodes, and the arrows indicate parent-child relationships between nodes.
 
 ### Moving through the DOM
 
-DOM nodes contain a wealth of links to other nearby nodes. The following diagram illustrates these: ![DOM Tree Example](https://eloquentjavascript.net/img/html-links.svg)
+## DOM nodes contain a wealth of links to other nearby nodes. The following diagram illustrates these:
+
+## ![DOM Tree Example](https://eloquentjavascript.net/img/html-links.svg)
 
 - [children](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children) - Returns all children of a node in an array like list
 - [firstChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild) & [lastChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild) - Returns first or last child of a node
